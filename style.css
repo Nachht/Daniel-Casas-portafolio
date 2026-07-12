@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    font-family:"Poppins",sans-serif;
+    font-family:"Outfit",sans-serif;
     background:#050505;
     color:white;
     overflow-x:hidden;
@@ -62,12 +62,31 @@ body{
     box-shadow: 0 10px 20px rgba(155, 5, 255, 0.432);
 }
 
+.boton-menu{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
 /* Logo */
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
     font-size:1.3rem;
     font-weight:700;
-    letter-spacing:2px;
     color:white;
+}
+
+.logo i{
+    color:#ffffff;
+    text-shadow:
+        0 0 10px #7B7CFF,
+        0 0 20px #7B7CFF,
+        0 0 35px #00CFFF;
 }
 
 /* Menu */
@@ -83,6 +102,7 @@ body{
     text-decoration:none;
     font-size:.95rem;
     transition:.3s;
+    font-weight: 600;
 }
 
 /* línea inferior */
@@ -202,8 +222,8 @@ body{
 }
 
 .informacion h2{
-    font-size:1.5rem;
-    font-weight: 700;
+    font-size:2.5rem;
+    font-weight: 500;
     color: rgb(255, 255, 255);
 }
 
@@ -211,7 +231,7 @@ body{
     max-width:650px;
     color: white;
     line-height:1.9;
-    font-size:1.05rem;
+    font-size:1.5rem;
 }
 
 /* Botones */
@@ -283,6 +303,7 @@ body{
     margin-top:45px;
     display:flex;
     gap:20px;
+    transition:.35s;
 }
 
 .redes-sociales a{
@@ -293,9 +314,9 @@ body{
     justify-content:center;
     align-items:center;
     text-decoration:none;
-    color:white;
+    color:rgb(0, 0, 0);
     font-size:1.15rem;
-    background:rgba(255,255,255,.08);
+    background:rgb(255, 255, 255);
     border:1px solid rgba(255,255,255,.15);
     backdrop-filter:blur(15px);
     transition:.35s;
@@ -305,6 +326,7 @@ body{
     transform: translateY(-6px);
     background: linear-gradient(135deg,#7B7CFF, #00CFFF);
     box-shadow: 0 0 25px rgba(0,207,255,.35);
+    color: white;
 }
 
 /* Indicador de scroll */
@@ -388,15 +410,33 @@ body{
     }
 }
 
-@media(max-width:992px){
-
-    .contenedor-luna{
-        width:660px;
-        left:-290px;
+@media (max-width:992px){
+    .boton-menu{
+        display:block;
+    }
+    .menu{
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:30px;
+        padding:30px 0;
+        background:rgba(20,20,20,.95);
+        backdrop-filter:blur(20px);
+        border-radius:25px;
+        opacity:0;
+        visibility:hidden;
+        transform:translateY(-20px);
+        transition:.35s;
     }
 
-    .columna-derecha{
-        width:55%;
+    .menu.menu-abierto{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
     }
 }
 
@@ -421,5 +461,84 @@ body{
         width:640px;
         left:-340px;
         top:48%;
+    }
+}
+
+/* --------------------------------- Sobre mi -------------------------------------*/
+.sobre-mi{
+    padding:150px 0;
+    position:relative;
+}
+
+.contenedor-sobre-mi{
+    width:min(1400px,90%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:45% 55%;
+    align-items:center;
+    gap:80px;
+}
+
+.imagen-sobre-mi{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translateY(180px);
+}
+
+.imagen-sobre-mi img{
+    width:65%;
+    max-width:520px;
+    animation:flotar 8s ease-in-out infinite;
+    filter:drop-shadow(0 0 70px #0059ff96);
+    border-radius: 100%;
+}
+
+.titulo-seccion{
+    color: #ffffff;
+    letter-spacing:4px;
+    font-weight:600;
+    font-size: 1.10rem;
+    text-shadow:
+        0 0 10px #e100ff,
+        0 0 20px #d400ff,
+        0 0 35px #ea00ff;
+}
+
+.contenido-sobre-mi h2{
+    margin-top:15px;
+    font-size:3.3rem;
+}
+
+.contenido-sobre-mi p{
+    margin-top:28px;
+    color:#ffffff;
+    font-size:1.18rem;
+    line-height:2;
+}
+
+.frase-sobre-mi{
+    margin-top:50px;
+    padding-left:25px;
+    border-left:4px solid #9900ff;
+    font-size:1.45rem;
+    font-style:italic;
+    color:white;
+}
+
+@media (max-width:992px){
+    .contenedor-sobre-mi{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:60px;
+    }
+
+    .imagen-sobre-mi{
+        transform:translateY(0);
+    }
+
+    .frase-sobre-mi{
+        border:none;
+        padding:0;
     }
 }
