@@ -506,10 +506,12 @@ body {
 }
 
 .imagen-sobre-mi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(200px);
+    position: relative;
+    display: inline-flex;
+    width: fit-content;
+    margin: 200px auto 0;
+    transform: translateX(-20px);
+    top: 90px;
 }
 
 /*Etiqueta img*/
@@ -523,19 +525,19 @@ body {
     transition: .35s;
 }
 
-.imagen-sobre-mi:hover .etiqueta-mascota {
+.imagen-sobre-mi img:hover+.etiqueta-mascota {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-38%) translateY(0px);
 }
 
 .imagen-sobre-mi img {
-    width: 70%;
+    width: 90%;
     max-width: 520px;
     animation: flotar 5s ease-in-out infinite;
-    filter: drop-shadow(0 0 70px #0059ff96);
+    filter: drop-shadow(0 0 70px #0059ffa6);
     border-radius: 100%;
-    margin-right: 150px;
+    display: block;
 }
 
 .titulo-seccion {
@@ -579,7 +581,7 @@ body {
 
     .imagen-sobre-mi {
         transform: translateY(0);
-        transform: translateX(75px);
+        transform: translateX(20px);
     }
 
     .frase-sobre-mi {
@@ -596,7 +598,8 @@ body {
 
 /* --------------------------------- seccion CV -------------------------------------*/
 .cv {
-    padding: 150px 0;
+    padding: 100px 0;
+    position: relative;
 }
 
 .contenedor-cv {
@@ -728,7 +731,6 @@ body {
         border: none;
         padding: 0;
     }
-
 }
 
 /* --------------------------------- proyectos -------------------------------------*/
@@ -768,7 +770,7 @@ body {
 /* --------------------------------- tecnologias -------------------------------------*/
 .tecnologias {
     position: relative;
-    padding: 170px 0;
+    padding: 100px 0;
     overflow: hidden;
 }
 
@@ -960,7 +962,7 @@ body {
     }
 
     100% {
-        transform: translateY(0) rotate(-1deg); 
+        transform: translateY(0) rotate(-1deg);
     }
 
 }
@@ -1093,14 +1095,12 @@ body {
 }
 
 /*Posiciones gatos*/
-/*Perrita (izquierda superior)*/
 .mascota-kiara {
     width: 220px;
     top: 530px;
     left: 150px;
 }
 
-/*Carey (izquierda inferior)*/
 .mascota-nami {
     width: 230px;
     bottom: 180px;
@@ -1108,7 +1108,6 @@ body {
     animation-delay: 1s;
 }
 
-/*Blanco (derecha superior)*/
 .mascota-luffy {
     width: 220px;
     top: 580px;
@@ -1116,7 +1115,6 @@ body {
     animation-delay: 2s;
 }
 
-/* Atigrado (derecha inferior) */
 .mascota-sanji {
     width: 250px;
     bottom: 150px;
@@ -1148,4 +1146,145 @@ body {
     .mascota-sanji {
         display: none;
     }
+}
+
+/* --------------------------------- Contacto -------------------------------------*/
+.contacto {
+    padding: 170px 0;
+}
+
+.contenedor-contacto {
+    width: min(900px, 90%);
+    margin: auto;
+    text-align: center;
+}
+
+.contenedor-contacto h2 {
+    margin-top: 18px;
+    font-size: 3.3rem;
+}
+
+.descripcion-contacto {
+    max-width: 760px;
+    margin: 30px auto 60px;
+    line-height: 2;
+    font-size: 1.15rem;
+}
+
+#formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 18px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.507);
+    background: rgba(153, 0, 255, 0.205);
+    backdrop-filter: blur(15px);
+    color: white;
+    outline: none;
+    font-family: inherit;
+    transition: .35s;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto textarea:focus {
+    border-color: #9900ff;
+    box-shadow: 0 0 20px rgba(153, 0, 255, .35);
+    background-color: rgba(183, 0, 255, 0.473);
+}
+
+#formulario-contacto textarea {
+    resize: none;
+}
+
+#btnEnviar {
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    padding: 18px 45px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #0095ff, #9900ff);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .35s;
+    top: 30px;
+}
+
+#btnEnviar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent,rgb(255, 255, 255), transparent);
+    transition: .8s;
+}
+
+#btnEnviar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(153, 0, 255, 0.699);
+}
+
+#btnEnviar:hover::before {
+    left: 140%;
+}
+
+#mensajeFormulario {
+    margin-top: 55px;
+    font-weight: 600;
+}
+
+.redes-contacto {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.redes-contacto a {
+    color: white;
+    font-size: 2.5rem;
+    transition: .35s;
+}
+
+.redes-contacto a:hover {
+    color: #0077ff;
+    transform: translateY(-4px);
+}
+
+/*Responsive*/
+@media(max-width:992px) {
+    .fila {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-contacto h2 {
+        font-size: 2.6rem;
+    }
+
+    .descripcion-contacto {
+        font-size: 1rem;
+    }
+}
+
+.frase-final {
+    margin-top: 60px;
+    color: #cfcfcf;
+    font-style: italic;
+    line-height: 1.8;
 }

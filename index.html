@@ -14,11 +14,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/icon.png">
-
 </head>
 
 <body>
-
     <!-- Fondo -->
     <div class="fondo"></div>
     <div class="capa-color"></div>
@@ -343,9 +341,55 @@
                     <p>Guardían de la galaxia.</p>
                 </div>
             </div>
+            <!-- Indicador -->
+            <div class="indicador-scroll">
+                <span></span>
+            </div>
         </section>
-    </main>
 
+        <!-- Contacto -->
+        <section class="contacto" id="contacto">
+            <div class="contenedor-contacto">
+                <span class="titulo-seccion">
+                    CONTACTO
+                </span>
+                <h2>
+                    ¿Comenzamos una nueva misión?
+                </h2>
+                <p class="descripcion-contacto">
+                    Gracias por acompañarme en este recorrido. Si tienes una idea, una
+                    oportunidad, un proyecto o simplemente quieres saludar, estaré
+                    encantado de leer tu mensaje, siempre estoy abierto a aprender,
+                    colaborar y afrontar nuevos desafíos.
+                </p>
+                <form id="formulario-contacto" action="https://formspree.io/f/xpqvzbzo" method="POST">
+                    <div class="fila">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Asunto" required>
+
+                    <textarea name="message" rows="7" placeholder="Escribe tu mensaje..." required></textarea>
+                    <button type="submit" id="btnEnviar">
+                        Enviar mensaje 🚀
+                    </button>
+                </form>
+                <div id="mensajeFormulario"></div>
+                <div class="redes-contacto">
+                    <a href="https://github.com/Nachht" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daniel-steven-casas-pulido-desarrollador-web/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <p class="frase-final">
+            Gracias por acompañarme en este viaje.<br>
+            El universo siempre tiene espacio para una nueva idea. 🌙
+        </p>
+    </main>
     <script src="script.js"></script>
 </body>
 
