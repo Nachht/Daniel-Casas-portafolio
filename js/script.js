@@ -28,13 +28,31 @@ formulario.addEventListener("submit", async (e) => {
         });
 
         if (respuesta.ok) {
+
             mensaje.style.color = "#62ff8e";
             mensaje.textContent = "✓ ¡Mensaje enviado correctamente!";
+
             formulario.reset();
 
+            boton.textContent = "✓ Enviado";
+            boton.style.background = "#22c55e";
+
+            setTimeout(() => {
+
+                boton.disabled = false;
+                boton.textContent = "Enviar mensaje 🚀";
+                boton.style.background = "";
+                mensaje.textContent = "";
+
+            }, 3000);
+
         } else {
+
             mensaje.style.color = "#ff7272";
             mensaje.textContent = "No se pudo enviar el mensaje.";
+
+            boton.disabled = false;
+            boton.textContent = "Enviar mensaje 🚀";
         }
 
     } catch {
