@@ -170,7 +170,7 @@ body {
 .hero {
     position: relative;
     width: min(1500px, 92%);
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
@@ -195,13 +195,15 @@ body {
 .contenedor-luna {
     position: absolute;
     left: -180px;
-    top: 50%;
+    top:calc(50% + 20px);
     width: 900px;
     transform: translateY(-50%);
-    animation: flotar 8s ease-in-out infinite;
+    animation:flotar 8s ease-in-out infinite;
 }
 
-.contenedor-luna img {
+.luna {
+    display: block;
+    width: 100%;
     animation: girarLuna 200s linear infinite;
 }
 
@@ -408,22 +410,21 @@ body {
     }
 }
 
-@keyframes flotar {
-    0% {
-        transform:
-            translateY(-50%) translateX(0);
+@keyframes flotar{
+    0%{
+        transform:translateY(-50%);
     }
 
-    50% {
-        transform:
-            translateY(calc(-45% - 15px)) translateX(0);
+    50%{
+        transform:translateY(calc(-50% - 15px));
     }
 
-    100% {
-        transform:
-            translateY(-50%) translateX(0);
+    100%{
+        transform:translateY(-50%);
     }
+
 }
+
 
 @keyframes bajar {
     0% {
@@ -441,16 +442,14 @@ body {
     }
 }
 
-@keyframes girarLuna {
-
-    from {
-        transform: rotate(0deg);
+@keyframes girarLuna{
+    from{
+        transform:rotate(0deg);
     }
 
-    to {
-        transform: rotate(360deg);
+    to{
+        transform:rotate(360deg);
     }
-
 }
 
 /* Responsive */
