@@ -40,6 +40,18 @@
                     <li><a href="#proyectos">Proyectos</a></li>
                     <li><a href="#tecnologias">Tecnologías</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+
+                    <!--Idioma
+                    <div class="selector-idioma">
+                        <button class="idioma activo" data-lang="es">
+                            ES
+                        </button>
+                        <span class="separador-idioma">|</span>
+                        <button class="idioma" data-lang="en">
+                            EN
+                        </button>
+                    </div>
+                    -->
                 </ul>
             </nav>
         </div>
@@ -142,7 +154,6 @@
         </section>
 
         <!-- CV -->
-        <!-- Mi recorrido -->
         <section class="recorrido" id="cv">
             <div class="contenedor-recorrido">
                 <div class="encabezado-recorrido">
@@ -278,67 +289,92 @@
                 </div>
 
                 <!-- Estado actual -->
-                <div class="panel-estado">
-                    <h3>
-                        Estado actual
-                    </h3>
+                <div class="estado-actual">
+                    <span class="titulo-seccion">
+                        ESTADO ACTUAL
+                    </span>
+                    <div class="decoracion-titulo">
+                        <span></span>
+                        <i class="fa-solid fa-star"></i>
+                        <span></span>
+                    </div>
+                    <h2>
+                        Tecnologías y fortalezas
+                    </h2>
                     <p class="descripcion-panel">
-                        Después de cada paso dado, este es mi estado actual como desarrollador y las
-                        habilidades que continúo fortaleciendo..
+                        Después de cada paso dado, este es mi estado actual como desarrollador
+                        y las habilidades que continúo fortaleciendo.
                     </p>
-                    <div class="panel-grid">
+                    <div class="estado-grid">
 
-                        <!-- Stack -->
-                        <div class="panel-columna">
-                            <h4>
-                                Stack principal
-                            </h4>
-                            <ul>
-                                <li>Java</li>
-                                <li>Spring Boot</li>
-                                <li>JavaScript</li>
-                                <li>PHP</li>
-                                <li>HTML & CSS</li>
-                                <li>MySQL</li>
-                                <li>Git & GitHub</li>
-                            </ul>
-                        </div>
+                        <!-- Stak -->
+                        <article class="estado-card stack">
+                            <div class="icono-card">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3>Stack principal</h3>
+                            <div class="linea-card"></div>
+                            <div class="estado-tags">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>Bootstrap</span>
+                                <span>MySQL</span>
+                                <span>Git</span>
+                                <span>GitHub</span>
+                                <span>VS Code</span>
+                                <span>IntelliJ IDEA</span>
+                                <span>Figma</span>
+                                <span>phpMyAdmin</span>
+                                <span>SCRUM</span>
+                            </div>
+                        </article>
 
                         <!-- Especialidad -->
-                        <div class="panel-columna">
-                            <h4>
-                                Especialidad
-                            </h4>
-                            <ul>
-                                <li>Desarrollo Frontend</li>
-                                <li>Desarrollo Web</li>
-                                <li>APIs REST</li>
-                                <li>Bases de datos relacionales</li>
-                                <li>Resolución de incidencias</li>
-                                <li>Documentación técnica</li>
-                            </ul>
-                        </div>
+                        <article class="estado-card especialidad">
+                            <div class="icono-card">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3>Especialidad</h3>
+                            <div class="linea-card"></div>
+                            <div class="estado-tags">
+                                <span>Desarrollo Web</span>
+                                <span>Frontend</span>
+                                <span>APIs REST</span>
+                                <span>Bases de datos relacionales</span>
+                                <span>Documentación técnica</span>
+                                <span>Soporte técnico</span>
+                                <span>Resolución de incidencias</span>
+                            </div>
+                        </article>
 
                         <!-- Habilidades -->
-                        <div class="panel-columna">
-                            <h4>
-                                Habilidades
-                            </h4>
-                            <ul>
-                                <li>Trabajo en equipo</li>
-                                <li>Comunicación</li>
-                                <li>Pensamiento analítico</li>
-                                <li>Aprendizaje continuo</li>
-                                <li>Resolución de problemas</li>
-                                <li>Adaptabilidad</li>
-                                <li>Proactividad</li>
-                            </ul>
-                        </div>
+                        <article class="estado-card habilidades">
+                            <div class="icono-card">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h3>Habilidades</h3>
+                            <div class="linea-card"></div>
+                            <div class="estado-tags">
+                                <span>Trabajo en equipo</span>
+                                <span>Comunicación</span>
+                                <span>Pensamiento analítico</span>
+                                <span>Aprendizaje continuo</span>
+                                <span>Resolución de problemas</span>
+                                <span>Adaptabilidad</span>
+                                <span>Proactividad</span>
+                            </div>
+                        </article>
                     </div>
-                    <div class="estado-final">
+
+                    <div class="estado-footer">
+                        <i class="fa-solid fa-rocket"></i>
                         <p>
-                            Siempre en búsqueda de nuevos retos, tecnologías y oportunidades que me permitan seguir
-                            creciendo como desarrollador.
+                            Siempre en búsqueda de nuevos retos, tecnologías y oportunidades
+                            que me permitan seguir creciendo como desarrollador.
                         </p>
                     </div>
                 </div>
@@ -350,7 +386,7 @@
         </section>
 
         <!---------------------- proyectos ------------------------>
-        <section class="proyectos" id="proyectos">
+        <section class="seccion-proyectos" id="proyectos">
             <div class="contenedor-proyectos">
                 <div class="encabezado-proyectos">
                     <span class="titulo-seccion">
@@ -359,158 +395,169 @@
                     <h2>
                         Misiones completadas
                     </h2>
-                    <p class="descripcion-proyectos">
+                    <p class="texto-proyectos">
                         Cada proyecto representa un nuevo reto superado y una oportunidad
-                        para seguir creciendo como desarrollador. Aquí encontrarás algunos
-                        de los trabajos que mejor reflejan mi proceso de aprendizaje y las
-                        tecnologías que he utilizado para convertir ideas en realidad.
+                        para seguir creciendo como desarrollador. Estos son algunos de los
+                        trabajos que mejor reflejan mi aprendizaje y las tecnologías que
+                        utilizo para convertir ideas en realidad.
                     </p>
                 </div>
-                <div class="grid-proyectos">
+                <div class="proyectos-grid">
 
-                    <!-- Tarjeta -->
-                    <article class="tarjeta-proyecto">
-                        <div class="cabecera-proyecto">
-                            <span class="log">
-                                LOG 01
-                            </span>
-                            <span class="tipo">
-                                🛒 E-commerce
-                            </span>
-                        </div>
-                        <div class="imagen-proyecto">
-                            <img src="img/fondoBaseLuna.png" alt="Proyecto">
-                            <div class="overlay-proyecto">
-                                <a href="#" target="_blank" rel="noopener noreferrer">🚀 Explorar</a>
-                                <a href=" https://github.com/Nachht/Kumo" target="_blank"
-                                    rel="noopener noreferrer">GitHub</a>
+                    <!-- Log 1-->
+                    <article class="proyecto-card">
+                        <img src="img/kumoMini.png" alt="Kumo" class="proyecto-imagen">
+                        <div class="proyecto-info">
+                            <div class="proyecto-header">
+                                <span class="proyecto-log">
+                                    LOG 01
+                                </span>
+                                <span class="proyecto-badge">
+                                    E-commerce
+                                </span>
                             </div>
-                        </div>
-                        <div class="contenido-proyecto">
                             <h3>Kumo</h3>
                             <p>
-                                Plataforma web de comercio electrónico enfocada en productos de anime. Permite explorar
-                                un catálogo organizado, gestionar productos y ofrecer una experiencia de compra
-                                intuitiva mediante una interfaz moderna y responsive.
+                                Plataforma web de comercio electrónico enfocada en productos
+                                de anime. Permite explorar un catálogo organizado, gestionar
+                                productos y ofrecer una experiencia moderna y responsive.
                             </p>
-                            <div class="iconos-proyecto">
-                                <img src="img/html.png">
-                                <img src="img/css.png">
-                                <img src="img/javascript.png">
-                                <img src="img/bootstrap.png" style="width: 60px">
-                                <img src="img/mysql.png" style="width: 50px">
-                                <img src="img/Springboot.png">
+                            <div class="proyecto-tags">
+                                <span class="proyecto-tag">Java</span>
+                                <span class="proyecto-tag">Spring Boot</span>
+                                <span class="proyecto-tag">MySQL</span>
+                                <span class="proyecto-tag">Bootstrap</span>
+                                <span class="proyecto-tag">JavaScript</span>
+                            </div>
+                            <div class="proyecto-botones">
+                                <a href="#" class="btn-demo" target="_blank">
+                                    Proximamente...
+                                </a>
+
+                                <a href="https://github.com/Nachht/Kumo" class="btn-github" target="_blank">
+                                    GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="tarjeta-proyecto">
-                        <div class="cabecera-proyecto">
-                            <span class="log">
-                                LOG 02
-                            </span>
-                            <span class="tipo">
-                                🛒 E-commerce
-                            </span>
-                        </div>
-                        <div class="imagen-proyecto">
-                            <img src="img/fondoBaseLuna.png" alt="Proyecto">
-                            <div class="overlay-proyecto">
-                                <a href="proyectos/trendyshop2.0/index.html" target="_blank"
-                                    rel="noopener noreferrer">🚀
-                                    Explorar</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <!-- Log 2-->
+                    <article class="proyecto-card">
+                        <img src="img/TrendyShopMini.png" alt="TrendyShop" class="proyecto-imagen">
+                        <div class="proyecto-info">
+                            <div class="proyecto-header">
+                                <span class="proyecto-log">
+                                    LOG 02
+                                </span>
+                                <span class="proyecto-badge">
+                                    E-commerce
+                                </span>
                             </div>
-                        </div>
-                        <div class="contenido-proyecto">
-                            <h3>TrendyShop</h3>
+                            <h3>TrendyShop 2.0</h3>
                             <p>
-                                Renovación y modernización de una tienda en línea enfocada en ofrecer una experiencia de
-                                compra más atractiva, intuitiva y responsive. El proyecto fue desarrollado de forma
-                                colaborativa, mejorando la interfaz, la navegación y la organización del contenido para
-                                facilitar la interacción del usuario.
+                                Modernización colaborativa de una tienda online mejorando
+                                la navegación, el diseño y la experiencia del usuario
+                                mediante una interfaz responsive.
                             </p>
-                            <div class="iconos-proyecto">
-                                <img src="img/html.png">
-                                <img src="img/css.png">
-                                <img src="img/bootstrap.png" style="width: 60px">
-                                <img src="img/javascript.png">
+                            <div class="proyecto-tags">
+                                <span class="proyecto-tag">HTML5</span>
+                                <span class="proyecto-tag">CSS3</span>
+                                <span class="proyecto-tag">Bootstrap</span>
+                                <span class="proyecto-tag">JavaScript</span>
+                                <span class="proyecto-tag">LocalStorage</span>
+                            </div>
+                            <div class="proyecto-botones">
+                                <a href="https://trendyshop2-0.pages.dev/" class="btn-demo" target="_blank">
+                                    Ver proyecto
+                                </a>
+
+                                <a href="https://github.com/Nachht/TrendyShop2.0" class="btn-github" target="_blank">
+                                    GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="tarjeta-proyecto">
-                        <div class="cabecera-proyecto">
-                            <span class="log">
-                                LOG 03
-                            </span>
-                            <span class="tipo">
-                                📖 Web Colaborativa
-                            </span>
-                        </div>
-                        <div class="imagen-proyecto">
-                            <img src="img/fondoBaseLuna.png" alt="Proyecto">
-                            <div class="overlay-proyecto">
-                                <a href="proyectos/Blog_anime/index.html" target="_blank" rel="noopener noreferrer">🚀
-                                    Explorar</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <!-- Log 3 -->
+                    <article class="proyecto-card">
+                        <img src="img/AnimestartMini.png" alt="AnimeStart" class="proyecto-imagen">
+                        <div class="proyecto-info">
+                            <div class="proyecto-header">
+                                <span class="proyecto-log">
+                                    LOG 03
+                                </span>
+                                <span class="proyecto-badge">
+                                    Web colaborativa
+                                </span>
                             </div>
-                        </div>
-                        <div class="contenido-proyecto">
                             <h3>AnimeStart</h3>
                             <p>
-                                Blog web desarrollado en equipo como simulación de un proyecto bajo metodología Scrum.
-                                La plataforma está orientada a compartir contenido relacionado con el mundo del anime
-                                mediante una interfaz moderna, organizada y adaptable a diferentes dispositivos.
+                                Blog desarrollado en equipo bajo metodología Scrum para
+                                compartir contenido relacionado con el mundo del anime
+                                mediante una interfaz moderna y adaptable.
                             </p>
-                            <div class="iconos-proyecto">
-                                <img src="img/html.png">
-                                <img src="img/css.png">
-                                <img src="img/bootstrap.png" style="width: 60px">
-                                <img src="img/javascript.png">
+                            <div class="proyecto-tags">
+                                <span class="proyecto-tag">HTML5</span>
+                                <span class="proyecto-tag">CSS3</span>
+                                <span class="proyecto-tag">Bootstrap</span>
+                                <span class="proyecto-tag">JavaScript</span>
+                            </div>
+
+                            <div class="proyecto-botones">
+                                <a href="https://animestart.pages.dev" class="btn-demo" target="_blank">
+                                    Ver proyecto
+                                </a>
+
+                                <a href="https://github.com/Nachht/AnimeStart" class="btn-github" target="_blank">
+                                    GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="tarjeta-proyecto">
-                        <div class="cabecera-proyecto">
-                            <span class="log">
-                                LOG 04
-                            </span>
-                            <span class="tipo">
-                                🖥️ Gestor de Tareas
-                            </span>
-                        </div>
-                        <div class="imagen-proyecto">
-                            <img src="img/fondoBaseLuna.png" alt="Proyecto">
-                            <div class="overlay-proyecto">
-                                <a href="proyectos/Blog_anime/index.html" target="_blank" rel="noopener noreferrer">🚀
-                                    Explorar</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <!-- Log 4-->
+                    <article class="proyecto-card">
+                        <img src="img/PokedexMini.png" alt="Pokedex" class="proyecto-imagen">
+                        <div class="proyecto-info">
+                            <div class="proyecto-header">
+                                <span class="proyecto-log">
+                                    LOG 04
+                                </span>
+                                <span class="proyecto-badge">
+                                    API REST
+                                </span>
                             </div>
-                        </div>
-                        <div class="contenido-proyecto">
-                            <h3>PokéApi</h3>
+                            <h3>Pokédex</h3>
                             <p>
-                                Aplicación web desarrollada en equipo para gestionar tareas utilizando las Web Storage
-                                APIs del navegador. Permite almacenar información de forma local mediante LocalStorage y
-                                SessionStorage, aplicando conceptos de JavaScript, manipulación del DOM y persistencia
-                                de datos en el cliente.
+                                Aplicación web que consume la PokéAPI para consultar
+                                información de cualquier Pokémon y administrar favoritos
+                                utilizando LocalStorage y JavaScript.
                             </p>
-                            <div class="iconos-proyecto">
-                                <img src="img/html.png">
-                                <img src="img/css.png">
-                                <img src="img/bootstrap.png" style="width: 60px">
-                                <img src="img/javascript.png">
+                            <div class="proyecto-tags">
+                                <span class="proyecto-tag">HTML5</span>
+                                <span class="proyecto-tag">CSS3</span>
+                                <span class="proyecto-tag">JavaScript</span>
+                                <span class="proyecto-tag">REST API</span>
+                                <span class="proyecto-tag">LocalStorage</span>
+                            </div>
+                            <div class="proyecto-botones">
+                                <a href="https://pok-dex-7sc.pages.dev" class="btn-demo" target="_blank">
+                                    Ver proyecto
+                                </a>
+
+                                <a href="https://github.com/Nachht/Pok-Dex" class="btn-github" target="_blank">
+                                    GitHub
+                                </a>
                             </div>
                         </div>
                     </article>
-
-
+                </div>
+                <!-- Indicador -->
+                <div class="indicador-scroll">
+                    <span></span>
                 </div>
             </div>
         </section>
-
 
         <!-- Tecnologias -->
         <section class="tecnologias" id="tecnologias">

@@ -1,3 +1,4 @@
+//Menu responsive
 const botonMenu = document.querySelector(".boton-menu");
 const menu = document.querySelector(".menu");
 
@@ -5,7 +6,7 @@ botonMenu.addEventListener("click", () => {
     menu.classList.toggle("menu-abierto");
 });
 
-//Contacto
+//Contacto form
 const formulario = document.getElementById("formulario-contacto");
 const mensaje = document.getElementById("mensajeFormulario");
 const boton = document.getElementById("btnEnviar");
@@ -28,7 +29,6 @@ formulario.addEventListener("submit", async (e) => {
         });
 
         if (respuesta.ok) {
-
             mensaje.style.color = "#62ff8e";
             mensaje.textContent = "✓ ¡Mensaje enviado correctamente!";
 
@@ -47,7 +47,6 @@ formulario.addEventListener("submit", async (e) => {
             }, 3000);
 
         } else {
-
             mensaje.style.color = "#ff7272";
             mensaje.textContent = "No se pudo enviar el mensaje.";
 
