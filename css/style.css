@@ -1159,6 +1159,35 @@ body {
     .decoracion-titulo span {
         width: 50px;
     }
+
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item.izquierda,
+    .timeline-item.derecha {
+        width: 100%;
+        left: 0;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .izquierda .timeline-punto,
+    .derecha .timeline-punto {
+        left: 8px;
+        right: auto;
+    }
+
+    .timeline-card {
+        padding: 25px 22px;
+    }
+
+    .timeline-card h3 {
+        font-size: 1.6rem;
+    }
+
 }
 
 /*-------------------------------- PROYECTOS -------------------------------*/
